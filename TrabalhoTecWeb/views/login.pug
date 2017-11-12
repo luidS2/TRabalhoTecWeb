@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  form(action='Login', method='post', enctype='multipart/form-data')
+    .box
+      .box-body
+        .form-group
+          label(for='titulo') Login
+          input.form-control(type='text', name='email')
+        .form-group
+          label(for='data') Senha
+          input.form-control(type='password', name='senha')
+        if msg
+          p.text-danger= msg
+        .form-group
+          button.btn.btn-primary(type='submit') Entrar
